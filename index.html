@@ -10,50 +10,144 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">Let us know how to improve freeCodeCamp</p>
+  <div class="Boundary">
+    <div class="surv">
+      <h1 id="title">Survey Form</h1>
+    </div>
+    <div id="form">
+      <p id="description" class="surv">Let us know how to improve freeCodeCamp</p>
+    <form id="survey-form">
+      <div class="row">
+        <div class="label">
+          <label id="name-label" for="name">*Name</label>
+        </div>
+        <div class="content">
+          <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          <label id="email-label" for="email">*Email</label>
+        </div>
+        <div class="content">
+          <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          <label id="number-label" for="number">*Age</label>
+        </div>
+        <div class="content">
+          <input type="number" id="number" name="age" placeholder="Enter your age" min="0" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          <label id="dropdown-label" for="dropdown">What Option best describe your present role</label>
+        </div>
+        <div class="content">
+          <select id="dropdown" name="present-role" >
+            <option>Student</option>
+            <option>Full time Job</option>
+            <option>Full Time Learner</option>
+            <option>Prefer Not to say</option>
+            <option>Others</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          <label id="radio-label">How Likely is it that you will recommend freeCodeCamp to Someone</label>
+        </div>
+        <div class="content">
+          <ul>
+            <li>
+              <label for="definite">Definitely</label>
+              <input type="radio" id="definite" class="rad" name="radiobuttons" value="1">
+            </li>
+            <li>
+              <label for="maybe">Maybe</label>
+              <input type="radio" id="maybe" class="rad" name="radiobuttons" value="2">
+            </li>
+            <li>
+              <label for="not">Not Sure</label>
+              <input type="radio" id="not" class="rad" name="radiobuttons" value="3">
+            </li>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          <label id="datalist" for="myFCC">What do you like most in FCC</label>
+        </div>
+        <div class="content">
+          <input type="text" name="datalist" id="myFCC" list="mySuggestion">
+          <datalist id="mySuggestion">
+            <option>Challenges</option>
+            <option>Projects</option>
+            <option>Community</option>
+            <option>OpenSource</option>
+          </datalist>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          <label id="checkbox">Things that should be improved in the future.<br>(Check all that applies)</label>
+        </div>
+        <div class="content">
+          <ul>
+            <li>
+              <label for="front">Front-End Projects</label>
+              <input type="checkbox" id="front"  name="check" value="1">
+            </li>
+            <li>
+              <label for="back">Back-End Projects</label>
+              <input type="checkbox" id="back"  name="check" value="2">
+            </li>
+            <li>
+              <label for="data">Data Visualization</label>
+              <input type="checkbox" id="data"  name="check" value="3">
+            </li>
+            <li>
+              <label for="challenge">Challenges</label>
+              <input type="checkbox" id="challenge"  name="check" value="4">
+            </li>
+            <li>
+              <label for="open">Open Source Community</label>
+              <input type="checkbox" id="open"  name="check" value="5">
+            </li>
+            <li>
+              <label for="gitter">Gitter Help Room</label>
+              <input type="checkbox" id="gitter"  name="check" value="6">
+            </li>
+            <li>
+              <label for="video">Videos</label>
+              <input type="checkbox" id="video"  name="check" value="7">
+            </li>
+            <li>
+              <label for="city">City Meetup</label>
+              <input type="checkbox" id="city"  name="check" value="8">
+            </li>
+            <li>
+              <label for="wiki">Wiki</label>
+              <input type="checkbox" id="wiki"  name="check" value="9">
+            </li>
+            <li>
+              <label for="forum">Forum</label>
+              <input type="checkbox" id="forum"  name="check" value="1">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    </form>
+    </div>
   </div>
-  <form id="survey-form">
-    <label id="name-label">
-      *Name
-      <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required>
-    </label>
-    <label id="email-label">
-      *Email
-      <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
-    </label>
-    <label id="number-label">
-      *Age
-      <input type="number" id="number" name="age" placeholder="Enter your age" min="0">
-    </label>
-    <label>
-      What Option best describe your present role
-      <select id="dropdown" name="present-role">
-        <option>Student</option>
-        <option>Full time Job</option>
-        <option>Full Time Learner</option>
-        <option selected>Prefer Not to say</option>
-        <option>Others</option>
-      </select>
-    </label>
-    <fieldset>
-      <legend>
-        *How Likely is it that you will recommend freeCodeCamp to Someone
-      </legend>
-      <label>
-        Definitely
-        <input type="radio" name="freecode" checked>
-      </label>
-      <label>
-        Maybe
-        <input type="radio" name="freecode">
-      </label>
-      <label>
-        Not Sure
-        <input type="radio" name="freecode">
-      </label>
-    </fieldset>
-  </form>
 </body>
 </html>

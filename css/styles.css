@@ -2,10 +2,54 @@ html,
 body{
   margin:0;
   padding:0;
-  background-color: blue;
-  color: white;
+  color: blue;
 }
 
-label{
-  display: block;
+.surv{
+  text-align: center;
+}
+
+#form{
+width:80%;
+margin:auto;
+border: 1px solid white;
+background-color:cyan;
+}
+
+div.label{
+  display: inline-block;
+  text-align:right;
+  width:40%;
+  padding-right: 10px;
+}
+.content{
+  display: inline-block;
+  text-align: left;
+  width:50%;
+  vertical-align:top;
+}
+
+ul li{
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+ul{
+  margin:0px;
+  padding: 0px;
+}
+
+.row{
+  padding-bottom: 20px;
+}
+
+input[type="radio"],
+[type="checkbox"]{
+  float:left;
+}
+
+input[type="text"],
+     [type="email"]{
+  width:250px;
+  height:20px;
 }
